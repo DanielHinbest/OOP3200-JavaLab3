@@ -1,6 +1,7 @@
 /* Program Name: OOP 3200 - Java Lab 2 - WorkTicket
  * Authors: Ryan Clayson and Daniel Hinbest
  * Date: November 19, 2020
+ * Modified: December 3, 2020
  * Description: A project to create and display a work ticket using the WorkTicket class
  */
 package ca.durhamcollege;
@@ -41,6 +42,13 @@ public class WorkTicket
     public WorkTicket(int ticketNumber, String clientID, int year, int month, int day, String issueDescription)
     {
         setWorkTicket(ticketNumber, clientID, year, month, day, issueDescription);
+    }
+
+    public WorkTicket(WorkTicket workTicket){
+        this.ticketNumber = workTicket.ticketNumber;
+        this.clientID = workTicket.clientID;
+        this.ticketDate = workTicket.ticketDate;
+        this.issueDescription = workTicket.issueDescription;
     }
 
     /**
